@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Cambridge Dictionary Helper",
+  "version": "1.0.0",
+  "description": "Chrome extension for looking up words via Cambridge Dictionary",
+  "action": { "default_popup": "index.html" },
+  "content_scripts": [
+    {
+      "js": ["src/content.tsx"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  }
+}
